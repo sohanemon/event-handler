@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events Handler</title>
+    <script
+      src="https://kit.fontawesome.com/4a314d7cd5.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -17,10 +21,20 @@
           @apply px-4 py-2 m-4 rounded-lg font-semibold text-white hover:text-black transition-all duration-300;
         }
       }
+      @layer components {
+        .icon {
+          @apply w-full  py-10  transition-all  text-5xl absolute left-1/2  text-sky-500 cursor-pointer hover:animate-bounce;
+        }
+      }
     </style>
   </head>
   <body class="bg-slate-200">
-    <div class="grid place-content-center h-screen">
+    <!-- ------------------------- click section -------------------------- -->
+    <div id="div1" class="grid place-content-center h-screen relative">
+      <a href="#div2">
+        <i class="fa-solid fa-angles-down icon bottom-0"></i>
+      </a>
+
       <h1 id="heading" class="text-center text-2xl font-semibold">
         Change Body BG by clicking
       </h1>
@@ -38,7 +52,10 @@
         </button>
       </div>
     </div>
-    <div class="grid place-content-center h-screen">
+    <!-- ------------------------- hover section -------------------------- -->
+    <div id="div2" class="grid place-content-center h-screen">
+      <a class="icon" href="#div1"> <i class="fa-solid fa-angles-up"> </i></a>
+
       <h1 id="heading2" class="text-center text-2xl font-semibold">
         Change Body BG by hovering
       </h1>
@@ -50,7 +67,9 @@
         <button class="bg-orange-500" id="horange">Orange</button>
       </div>
     </div>
+    <!-- -------------------------- added script -------------------------- -->
     <script src="./js/bodyColorizeByClick.js"></script>
     <script src="./js/bodyColorizeByHover.js"></script>
+    <script src="./js/global.js"></script>
   </body>
 </html>
