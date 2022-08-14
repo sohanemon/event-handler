@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Handler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] } } },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        button {
+          @apply px-4 py-2 m-4 rounded-lg font-semibold text-white hover:text-black transition-all duration-300;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-slate-200">
+    <div class="grid place-content-center h-screen">
+      <h1 id="heading" class="text-center text-2xl font-semibold">
+        Change Body BG by clicking
+      </h1>
+      <div class="button-container flex items-center justify-center">
+        <button class="hover:bg-green-200 bg-green-500" id="green">
+          Green
+        </button>
+        <button class="hover:bg-red-200 bg-red-500" id="red">Red</button>
+        <button class="hover:bg-blue-200 bg-blue-500" id="blue">Blue</button>
+        <button class="hover:bg-slate-200 bg-slate-500" id="slate">
+          Slate
+        </button>
+        <button class="hover:bg-orange-200 bg-orange-500" id="orange">
+          Orange
+        </button>
+      </div>
+    </div>
+    <script src="./js/bodyColorize.js"></script>
+  </body>
+</html>
