@@ -49,7 +49,7 @@ hoverBlue.addEventListener("mouseout", () => {
   body.classList.add("bg-slate-200");
   heading2.style.color = null;
 });
-hoverSlate.addEventListener("mouseover", () => {
+hoverSlate.addEventListener("mouseover", (e) => {
   body.removeAttribute("class");
   body.classList.add("bg-slate-300");
   heading2.style.color = "gray";
