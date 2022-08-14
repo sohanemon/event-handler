@@ -1,9 +1,14 @@
+/* --------------------------------------------------------------------- */
+/*                  adding events direct function assign                 */
+/* --------------------------------------------------------------------- */
+
 const green = document.getElementById("green");
 const red = document.getElementById("red");
 const blue = document.getElementById("blue");
 const orange = document.getElementById("orange");
 const slate = document.getElementById("slate");
 const heading = document.getElementById("heading");
+
 green.onclick = () => {
   document.body.removeAttribute("class");
   document.body.classList.add("bg-green-400");
@@ -17,7 +22,7 @@ red.onclick = () => {
 blue.onclick = () => {
   document.body.removeAttribute("class");
   document.body.classList.add("bg-blue-400");
-  heading.style.color = "blue";
+  heading.style.color = "lightblue";
 };
 orange.onclick = () => {
   document.body.removeAttribute("class");
